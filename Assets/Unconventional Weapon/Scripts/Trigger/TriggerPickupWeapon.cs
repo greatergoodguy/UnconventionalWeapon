@@ -10,6 +10,7 @@ public class TriggerPickupWeapon : MonoBehaviour {
 			UtilLogger.Log(TAG, "Pick Up Weapon");
 			God.GuidanceUI.Text = "";
 			God.Hero.EquipWeapon(God.Weapon);
+			God.Weapon.Activate();
 			Destroy(gameObject);
 		}
 	}

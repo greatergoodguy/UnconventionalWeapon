@@ -3,8 +3,8 @@ using System.Collections;
 
 public class EliteWeapon : MonoBehaviour {
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void Activate() {
+		ArcReactorDemoGunController component = transform.FindChild("Gun").GetComponent<ArcReactorDemoGunController>();
+		component.enabled = true;
 	}
 }

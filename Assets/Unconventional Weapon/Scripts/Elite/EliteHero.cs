@@ -11,6 +11,10 @@ public class EliteHero : MonoBehaviour {
 		mouseLookCamera = transform.FindChild("Main Camera").GetComponent<MouseLook>();
 	}
 
+	void Update() {
+
+	}
+
 	public void EquipWeapon(EliteWeapon weapon) {
 		Transform tWeaponContainer = transform.FindChild("Main Camera/Weapon Container");
 		weapon.transform.parent = tWeaponContainer;
