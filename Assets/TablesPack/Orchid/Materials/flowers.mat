@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: flowers
+  m_Shader: {fileID: 4800000, guid: e92379f04ecbe2a47881f91f71f2ef3d, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: a2a92380e9448cf44a3b48f2d5ed8f43, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Main_tex
+        second:
+          m_Texture: {fileID: 2800000, guid: 645b514ca900bfb4db7f79966d6c121a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _normals
+        second:
+          m_Texture: {fileID: 2800000, guid: 656a542a575ee784694570cb22eda2c5, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Gloss
+        second: .0384615399
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .932835817, g: .932835817, b: .932835817, a: 1}
+      data:
+        first:
+          name: _Specular
+        second: {r: .723880589, g: .723880589, b: .723880589, a: 1}
