@@ -23,6 +23,16 @@ public static class God {
 		}
 	}
 
+	private static EliteWeaponUI weaponUI;
+	public static EliteWeaponUI WeaponUI {
+		get {
+			if(weaponUI == null) {
+				weaponUI = GameObject.FindGameObjectWithTag("Weapon UI").GetComponent<EliteWeaponUI>();
+			}
+			return weaponUI;
+		}
+	}
+
 	private static EliteHero hero;
 	public static EliteHero Hero {
 		get {

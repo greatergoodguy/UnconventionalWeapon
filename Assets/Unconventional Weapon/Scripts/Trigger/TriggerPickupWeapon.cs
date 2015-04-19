@@ -11,6 +11,7 @@ public class TriggerPickupWeapon : MonoBehaviour {
 			God.GuidanceUI.Text = "";
 			God.Hero.EquipWeapon(God.Weapon);
 			God.Weapon.Activate();
+			God.WeaponUI.Activate();
 			Destroy(gameObject);
 		}
 	}
