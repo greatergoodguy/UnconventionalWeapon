@@ -3632,7 +3632,7 @@ GameObject:
   - 4: {fileID: 597584459}
   - 108: {fileID: 597584458}
   m_Layer: 0
-  m_Name: Directional light Fill
+  m_Name: Directional light Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13471,9 +13471,9 @@ MonoBehaviour:
   canControl: 1
   useFixedUpdate: 1
   movement:
-    maxForwardSpeed: 6
-    maxSidewaysSpeed: 6
-    maxBackwardsSpeed: 6
+    maxForwardSpeed: 10
+    maxSidewaysSpeed: 10
+    maxBackwardsSpeed: 10
     slopeSpeedMultiplier:
       serializedVersion: 2
       m_Curve:
@@ -14325,6 +14325,18 @@ Prefab:
     - target: {fileID: 100000, guid: b03b3711d0cd849ed97fab123b810a30, type: 2}
       propertyPath: m_Name
       value: Hero
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b03b3711d0cd849ed97fab123b810a30, type: 2}
+      propertyPath: movement.maxForwardSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b03b3711d0cd849ed97fab123b810a30, type: 2}
+      propertyPath: movement.maxSidewaysSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b03b3711d0cd849ed97fab123b810a30, type: 2}
+      propertyPath: movement.maxBackwardsSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b03b3711d0cd849ed97fab123b810a30, type: 2}
