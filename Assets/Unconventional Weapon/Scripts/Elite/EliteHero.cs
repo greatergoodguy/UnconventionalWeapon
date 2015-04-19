@@ -3,7 +3,12 @@ using System.Collections;
 
 public class EliteHero : MonoBehaviour {
 
+	MouseLook mouseLookHero;
+	MouseLook mouseLookCamera;
+
 	void Awake() {
+		mouseLookHero = GetComponent<MouseLook>();
+		mouseLookCamera = transform.FindChild("Main Camera").GetComponent<MouseLook>();
 	}
 
 	public void EquipWeapon(EliteWeapon weapon) {
@@ -11,5 +16,15 @@ public class EliteHero : MonoBehaviour {
 		weapon.transform.parent = tWeaponContainer;
 		weapon.transform.localPosition = Vector3.zero;
 		weapon.transform.localRotation = Quaternion.identity;
+	}
+
+	public void Freeze() {
+		mouseLookHero.enabled = false;
+		mouseLookCamera.enabled = false;
+	}
+
+	public void UnFreeze() {
+		mouseLookHero.enabled = true;
+		mouseLookCamera.enabled = true;
 	}
 }

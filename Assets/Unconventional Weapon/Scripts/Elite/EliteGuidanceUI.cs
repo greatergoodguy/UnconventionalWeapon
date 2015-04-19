@@ -6,11 +6,13 @@ public class EliteGuidanceUI : MonoBehaviour {
 
 	Text textMessage;
 
-	void Awake() {
-		textMessage = transform.FindChild("Panel/Message").GetComponent<Text>();
+	public string Text
+	{
+		get { return textMessage.text; }
+		set { textMessage.text = value; }
 	}
 
-	public void SetText(string text) {
-		textMessage.text = text;
+	void Awake() {
+		textMessage = transform.FindChild("Panel/Message").GetComponent<Text>();
 	}
 }
