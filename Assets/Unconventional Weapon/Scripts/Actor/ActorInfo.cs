@@ -27,7 +27,31 @@ public class ActorInfo : MonoBehaviour {
 		textCurrentAge.text = "Current Age: " + currentHP.ToString();
 		textMaxAge.text = "Max Age: " + maxHP.ToString();
 
-		{
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 1").GetComponent<ActorHPChunk>());
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 2").GetComponent<ActorHPChunk>());
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 3").GetComponent<ActorHPChunk>());
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 4").GetComponent<ActorHPChunk>());
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 5").GetComponent<ActorHPChunk>());
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 6").GetComponent<ActorHPChunk>());
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 7").GetComponent<ActorHPChunk>());
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 8").GetComponent<ActorHPChunk>());
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 9").GetComponent<ActorHPChunk>());
+		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 10").GetComponent<ActorHPChunk>());
+	}
+
+	public void Initiate() {
+		int i=1;
+		foreach(ActorHPChunk hpChunk in hpChunks) {
+			if(i <= currentHP) {
+				hpChunk.EnableAge();
+			}
+			else if(i > currentHP && i <= maxHP) {
+				hpChunk.EnableCapacity();
+			}
+			else {
+				hpChunk.Disable();
+			}
+			i++;
 		}
 	}
 	
@@ -68,6 +92,9 @@ public class ActorInfo : MonoBehaviour {
 		if(maxHP < currentHP) {
 			tImageDeath.gameObject.SetActive(true);
 			isAlive = false;}
+		else {
+			hpChunks[maxHP].EnableLost();
+		}
 
 		textCurrentAge.text = "Current Age: " + currentHP.ToString();
 		textMaxAge.text = "Max Age: " + maxHP.ToString();
@@ -81,6 +108,9 @@ public class ActorInfo : MonoBehaviour {
 		if(maxHP < currentHP) {
 			tImageDeath.gameObject.SetActive(true);
 			isAlive = false;}
+		else {
+			hpChunks[currentHP - 1].EnableAge();
+		}
 		
 		textCurrentAge.text = "Current Age: " + currentHP.ToString();
 		textMaxAge.text = "Max Age: " + maxHP.ToString();

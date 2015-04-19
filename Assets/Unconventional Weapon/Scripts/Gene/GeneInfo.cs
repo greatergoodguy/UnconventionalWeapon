@@ -25,6 +25,12 @@ public class GeneInfo : MonoBehaviour {
 		else {
 			info = tInfo.GetComponent<ActorInfo>();
 		}
+
+		info.Initiate();
+	}
+
+	void Start() {
+
 	}
 
 	void ArcReactorHit() {
