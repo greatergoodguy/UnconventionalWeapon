@@ -33,6 +33,16 @@ public static class God {
 		}
 	}
 
+	private static EliteMissionUI missionUI;
+	public static EliteMissionUI MissionUI {
+		get {
+			if(missionUI == null) {
+				missionUI = GameObject.FindGameObjectWithTag("Mission UI").GetComponent<EliteMissionUI>();
+			}
+			return missionUI;
+		}
+	}
+
 	private static EliteHero hero;
 	public static EliteHero Hero {
 		get {

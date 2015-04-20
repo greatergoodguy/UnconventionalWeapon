@@ -36,6 +36,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _BumpTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 5e6f5a724777eb841af34c784c1a5b97, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _Illum
         second:
           m_Texture: {fileID: 2800000, guid: f8e424ade0b9ead4d82c0134a781ffe0, type: 3}
@@ -48,14 +55,11 @@ Material:
           m_Texture: {fileID: 2800000, guid: f8e424ade0b9ead4d82c0134a781ffe0, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+    m_Floats:
       data:
         first:
-          name: _BumpTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 5e6f5a724777eb841af34c784c1a5b97, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
+          name: _RflPower
+        second: 1
       data:
         first:
           name: _EmissionLM
@@ -63,10 +67,6 @@ Material:
       data:
         first:
           name: _EmitPow
-        second: 1
-      data:
-        first:
-          name: _RflPower
         second: 1
     m_Colors:
       data:

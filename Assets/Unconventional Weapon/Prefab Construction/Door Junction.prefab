@@ -67,7 +67,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100008
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +643,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 1
     m_Strength: 1
     m_Bias: .0500000007
     m_Softness: 4
@@ -678,7 +678,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 1
     m_Strength: 1
     m_Bias: .0500000007
     m_Softness: 4
@@ -713,7 +713,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 1
     m_Strength: 1
     m_Bias: .0500000007
     m_Softness: 4
@@ -759,6 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dda9bb514f329b4cbe9cb61bf3e0d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLocked: 0
   targetDoor: {fileID: 100004}
   targetParticles: {fileID: 0}
   doorOpenClip: {fileID: 8300000, guid: 073e339f114ac02499404c4212f41827, type: 3}

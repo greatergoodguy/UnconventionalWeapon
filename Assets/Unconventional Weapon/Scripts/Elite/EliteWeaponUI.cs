@@ -16,15 +16,13 @@ public class EliteWeaponUI : MonoBehaviour {
 	}
 
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.X)) {
-			if(isModeAbsorbLife) {
-				isModeAbsorbLife = false;
-				textWeaponMode.text = "Weapon Mode: Age Accelerate";
-			}
-			else {
-				isModeAbsorbLife = true;
-				textWeaponMode.text = "Weapon Mode: Absorb Life";
-			}
+		if(Input.GetKeyDown(KeyCode.Alpha1)) {
+			isModeAbsorbLife = true;
+			textWeaponMode.text = "Weapon Mode: Absorb Life";
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha2)) {
+			isModeAbsorbLife = false;
+			textWeaponMode.text = "Weapon Mode: Age Accelerate";
 		}
 	}
 

@@ -11,6 +11,12 @@ public class _MasterScript : MonoBehaviour {
 		tPauseUI = transform.FindChild("Pause UI");
 	}
 
+	void Start() {
+//		God.Hero.EquipWeapon(God.Weapon);
+//		God.Weapon.Activate();
+//		God.WeaponUI.Activate();
+	}
+
 	void Update () {
 		if((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) && !isPaused) {
 			Pause();

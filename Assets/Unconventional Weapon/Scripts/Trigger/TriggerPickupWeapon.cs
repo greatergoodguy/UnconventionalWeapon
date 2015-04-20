@@ -18,7 +18,7 @@ public class TriggerPickupWeapon : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		UtilLogger.Log(TAG, "OnTriggerEnter()");
-		God.GuidanceUI.Text = "Press 'Z' to pick up Age Sucker";
+		God.GuidanceUI.Text = "Press 'Z' to pick up Age-inator";
 	}
 
 	void OnTriggerExit(Collider other) {

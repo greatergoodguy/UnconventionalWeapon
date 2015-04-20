@@ -9,23 +9,27 @@ public class ActorInfo : MonoBehaviour {
 
 	private readonly float CYCLE_SPEED_IN_SEC = 2.0f;
 
-	private int currentHP = 3;
-	private int maxHP = 9;
+	private int currentAge = 3;
+	private int maxAge = 9;
 	private bool isAlive = true;
 
+	private Text textName;
 	private Text textCurrentAge;
 	private Text textMaxAge;
 	private Transform tImageDeath;
+	private Transform tCanvas;
 
 	private List<ActorHPChunk> hpChunks = new List<ActorHPChunk>();
 
 	void Awake() {
+		textName = transform.Find("Canvas/Panel/Text Name").GetComponent<Text>();
 		textCurrentAge = transform.Find("Canvas/Panel/Text Current Age").GetComponent<Text>();
 		textMaxAge = transform.Find("Canvas/Panel/Text Max Age").GetComponent<Text>();
 		tImageDeath = transform.Find("Canvas/Panel/Health Panel/Death");
+		tCanvas = transform.Find("Canvas");
 
-		textCurrentAge.text = "Current Age: " + currentHP.ToString();
-		textMaxAge.text = "Max Age: " + maxHP.ToString();
+		textCurrentAge.text = "Current Age: " + currentAge.ToString();
+		textMaxAge.text = "Max Age: " + maxAge.ToString();
 
 		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 1").GetComponent<ActorHPChunk>());
 		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 2").GetComponent<ActorHPChunk>());
@@ -39,13 +43,17 @@ public class ActorInfo : MonoBehaviour {
 		hpChunks.Add(transform.Find("Canvas/Panel/Health Panel/HP Chunk 10").GetComponent<ActorHPChunk>());
 	}
 
-	public void Initiate() {
+	public void Initiate(string name, int initialCurrentAge, int initialMaxAge) {
+		textName.text = name;
+		currentAge = initialCurrentAge;
+		maxAge = initialMaxAge;
+
 		int i=1;
 		foreach(ActorHPChunk hpChunk in hpChunks) {
-			if(i <= currentHP) {
+			if(i <= currentAge) {
 				hpChunk.EnableAge();
 			}
-			else if(i > currentHP && i <= maxHP) {
+			else if(i > currentAge && i <= maxAge) {
 				hpChunk.EnableCapacity();
 			}
 			else {
@@ -53,6 +61,9 @@ public class ActorInfo : MonoBehaviour {
 			}
 			i++;
 		}
+
+		textCurrentAge.text = "Current Age: " + currentAge.ToString();
+		textMaxAge.text = "Max Age: " + maxAge.ToString();
 	}
 	
 	void Update () {
@@ -88,31 +99,39 @@ public class ActorInfo : MonoBehaviour {
 		if(!isAlive) {
 			return;}
 
-		maxHP--;
-		if(maxHP < currentHP) {
+		maxAge--;
+		if(maxAge < currentAge) {
 			tImageDeath.gameObject.SetActive(true);
 			isAlive = false;}
 		else {
-			hpChunks[maxHP].EnableLost();
+			hpChunks[maxAge].EnableLost();
 		}
 
-		textCurrentAge.text = "Current Age: " + currentHP.ToString();
-		textMaxAge.text = "Max Age: " + maxHP.ToString();
+		textCurrentAge.text = "Current Age: " + currentAge.ToString();
+		textMaxAge.text = "Max Age: " + maxAge.ToString();
 	}
 
 	void IncrementCurrentAge() {
 		if(!isAlive) {
 			return;}
 		
-		currentHP++;
-		if(maxHP < currentHP) {
+		currentAge++;
+		if(maxAge < currentAge) {
 			tImageDeath.gameObject.SetActive(true);
 			isAlive = false;}
 		else {
-			hpChunks[currentHP - 1].EnableAge();
+			hpChunks[currentAge - 1].EnableAge();
 		}
 		
-		textCurrentAge.text = "Current Age: " + currentHP.ToString();
-		textMaxAge.text = "Max Age: " + maxHP.ToString();
+		textCurrentAge.text = "Current Age: " + currentAge.ToString();
+		textMaxAge.text = "Max Age: " + maxAge.ToString();
+	}
+
+	public void Show() {
+		tCanvas.gameObject.SetActive(true);
+	}
+
+	public void Hide() {
+		tCanvas.gameObject.SetActive(false);
 	}
 }
