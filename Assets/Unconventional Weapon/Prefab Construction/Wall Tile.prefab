@@ -60,6 +60,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400006}
+  - 114: {fileID: 11425358}
   m_Layer: 0
   m_Name: Wall Tile
   m_TagString: Untagged
@@ -109,8 +110,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.9496994, y: 2.82516503, z: -14.2160378}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: -9.01000023, y: -.829999983, z: -4.23000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -243,6 +244,25 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11425358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a387cac7cbeb4fc68512cb5479128e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameToWait: 0
+  generateTriangleStrips: 1
+  combineOnStart: 1
+  destroyAfterOptimized: 0
+  castShadow: 1
+  receiveShadow: 1
+  keepLayer: 1
+  addMeshCollider: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

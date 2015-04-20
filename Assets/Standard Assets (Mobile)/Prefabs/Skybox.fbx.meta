@@ -1,20 +1,21 @@
 fileFormatVersion: 2
-guid: 19e4f4252bab36f48a74f483b68ccfa4
+guid: 199ba61b407d7435aa1a5551f0844272
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
     2300000: //RootNode
+    2800000: __AssetImporterPreview
     3300000: //RootNode
-    4300000: Room_A_4m_doorway_wall
-    9500000: //RootNode
+    4300000: pCube1
+    11100000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 1
-    materialSearch: 2
+    materialName: 3
+    materialSearch: 1
   animations:
-    legacyGenerateAnimations: 4
+    legacyGenerateAnimations: 3
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
@@ -29,11 +30,11 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: .00999999978
-    meshCompression: 1
+    meshCompression: 0
     addColliders: 0
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -43,10 +44,10 @@ ModelImporter:
     secondaryUVPackMargin: 4
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    splitTangentsAcrossUV: 0
+    normalImportMode: 1
     tangentImportMode: 1
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
@@ -60,6 +61,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 1
   additionalBone: 0
   userData: 
