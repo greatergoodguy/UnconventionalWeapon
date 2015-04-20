@@ -8,7 +8,14 @@ public class ArcReactorDemoGunController : MonoBehaviour {
 	public int selectedLauncher;
 
 	private float recharge;
-	
+
+	private AudioSource asAbsorbLife;
+	private AudioSource asAgeAccelerate;
+
+	void Awake() {
+		asAbsorbLife = transform.FindChild("SFX Absorb Life").GetComponent<AudioSource>();
+		asAgeAccelerate = transform.FindChild("SFX Age Accelerate").GetComponent<AudioSource>();
+	}
 
 	// Update is called once per frame
 	void Update () 
@@ -39,11 +46,25 @@ public class ArcReactorDemoGunController : MonoBehaviour {
 		{
 			launchers[3].LaunchRay();
 			recharge = rechargeRate;
+			if(!asAbsorbLife.isPlaying) {
+				asAbsorbLife.Play();
+			}
 		}
 		else if (Input.GetMouseButton(0) && recharge == 0 && !God.WeaponUI.IsModeAbsorbLife)
 		{
 			launchers[6].LaunchRay();
 			recharge = rechargeRate;
+			if(!asAgeAccelerate.isPlaying) {
+				asAgeAccelerate.Play();
+			}
+		}
+		else if (!Input.GetMouseButton(0)) {
+			if(asAbsorbLife.isPlaying) {
+				asAbsorbLife.Stop();
+			}
+			if(asAgeAccelerate.isPlaying) {
+				asAgeAccelerate.Stop();
+			}
 		}
 	
 	}
