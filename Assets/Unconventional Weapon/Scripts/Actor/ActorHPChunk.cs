@@ -11,8 +11,6 @@ public class ActorHPChunk : MonoBehaviour {
 	Transform tLost;
 
 	void Awake() {
-
-		UtilLogger.Log(TAG, "Awake()");
 		RectTransform rt = GetComponent<RectTransform>();
 
 		tAge = transform.FindChild("Age");
