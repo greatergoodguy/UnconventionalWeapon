@@ -5,6 +5,7 @@ public class TriggerPickupWeapon : MonoBehaviour {
 
 	public readonly string TAG = "TriggerPickupWeapon";
 
+
 	void Update() {
 		if(Input.GetKeyDown(KeyCode.Z)) {
 			UtilLogger.Log(TAG, "Pick Up Weapon");

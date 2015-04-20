@@ -12,9 +12,9 @@ public class _MasterScript : MonoBehaviour {
 	}
 
 	void Start() {
-//		God.Hero.EquipWeapon(God.Weapon);
-//		God.Weapon.Activate();
-//		God.WeaponUI.Activate();
+		God.Hero.EquipWeapon(God.Weapon);
+		God.Weapon.Activate();
+		God.WeaponUI.Activate();
 	}
 
 	void Update () {
