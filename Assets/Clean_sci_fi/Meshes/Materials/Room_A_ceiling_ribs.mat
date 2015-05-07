@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Room_A_ceiling_ribs
-  m_Shader: {fileID: 4800000, guid: a9e309682966c444bbe36ea9f81b2cc3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4adff5596f7bd634d9540683f0ba02df, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -50,16 +50,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _MatCap
+          name: _BumpTex
         second:
-          m_Texture: {fileID: 2800000, guid: 5e929e45d9eba264f998af086da68b40, type: 3}
+          m_Texture: {fileID: 2800000, guid: bd8a55c9bbfd5314cbe3c0a0ce110914, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _BumpTex
+          name: _MatCap
         second:
-          m_Texture: {fileID: 2800000, guid: bd8a55c9bbfd5314cbe3c0a0ce110914, type: 3}
+          m_Texture: {fileID: 2800000, guid: 5e929e45d9eba264f998af086da68b40, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -67,6 +67,10 @@ Material:
         first:
           name: _EmissionLM
         second: 0
+      data:
+        first:
+          name: _EmitPow
+        second: 1
       data:
         first:
           name: _RflPower

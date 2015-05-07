@@ -36,6 +36,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _BumpTex
+        second:
+          m_Texture: {fileID: 2800000, guid: d682db560f706274fb99c90cf2289e02, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _AmbCube
         second:
           m_Texture: {fileID: 8900000, guid: 3ff2945369dff78448e8205208269622, type: 2}
@@ -48,13 +55,6 @@ Material:
           m_Texture: {fileID: 8900000, guid: 41104e01c023e974e83fa721745e58f3, type: 2}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _BumpTex
-        second:
-          m_Texture: {fileID: 2800000, guid: d682db560f706274fb99c90cf2289e02, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -62,12 +62,12 @@ Material:
         second: .329062343
       data:
         first:
-          name: _AmbPower
+          name: _RflPower
         second: 0
       data:
         first:
-          name: _RflPower
-        second: 1
+          name: _AmbPower
+        second: 0
     m_Colors:
       data:
         first:
