@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: a743c6cb0bde1654a850abbe66e550f0
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: b_Animate
+    100002: b_barrel_spin
+    100004: b_barrel_top
+    100006: b_barrel_top001
+    100008: b_clip_back
+    100010: b_clip_front
+    100012: b_Root
+    100014: //RootNode
+    100016: SK_Rifle_Ober_U1
+    400000: b_Animate
+    400002: b_barrel_spin
+    400004: b_barrel_top
+    400006: b_barrel_top001
+    400008: b_clip_back
+    400010: b_clip_front
+    400012: b_Root
+    400014: //RootNode
+    400016: SK_Rifle_Ober_U1
+    4300000: SK_Rifle_Ober_U1
+    7400000: Overheat
+    7400002: Fire
+    9500000: //RootNode
+    13700000: SK_Rifle_Ober_U1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Overheat
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 67
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: b_Root
+        weight: 1
+      - path: b_Root/b_Animate
+        weight: 1
+      - path: b_Root/b_Animate/b_barrel_spin
+        weight: 1
+      - path: b_Root/b_Animate/b_barrel_top
+        weight: 1
+      - path: b_Root/b_Animate/b_barrel_top001
+        weight: 1
+      - path: b_Root/b_Animate/b_clip_back
+        weight: 1
+      - path: b_Root/b_Animate/b_clip_front
+        weight: 1
+      - path: SK_Rifle_Ober_U1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fire
+      takeName: Take 001
+      firstFrame: 67
+      lastFrame: 77
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: b_Root
+        weight: 1
+      - path: b_Root/b_Animate
+        weight: 1
+      - path: b_Root/b_Animate/b_barrel_spin
+        weight: 1
+      - path: b_Root/b_Animate/b_barrel_top
+        weight: 1
+      - path: b_Root/b_Animate/b_barrel_top001
+        weight: 1
+      - path: b_Root/b_Animate/b_clip_back
+        weight: 1
+      - path: b_Root/b_Animate/b_clip_front
+        weight: 1
+      - path: SK_Rifle_Ober_U1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

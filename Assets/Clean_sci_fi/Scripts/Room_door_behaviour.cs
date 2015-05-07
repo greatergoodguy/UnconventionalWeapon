@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Room_door_behaviour : MonoBehaviour {
 
+	public bool isLocked = false;
 	public Object targetDoor;
 	public ParticleSystem targetParticles;
 	public AudioClip doorOpenClip;
@@ -10,6 +11,9 @@ public class Room_door_behaviour : MonoBehaviour {
 	
 	void DoDoorTrigger (bool openOrClose)
 	{
+		if(isLocked) {
+			return;}
+
 		Object currentTarget = targetDoor != null ? targetDoor : gameObject;
 		Behaviour targetBehaviour = currentTarget as Behaviour;
 		GameObject targetGameObject = currentTarget as GameObject;
